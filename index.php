@@ -1,4 +1,5 @@
 <?php
-echo 'tets';
+require('server/config/config.php');
+
 include 'index.html';
 ?>
