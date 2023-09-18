@@ -26,6 +26,6 @@
     "@types/react-dom": "^18.2.7"
   },
   "engines": {
-    "node": ">=16 <17"
+    "node": ">=16"
   }
 }
