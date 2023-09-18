@@ -9,9 +9,9 @@ try {
     // $pdo = new PDO("pgsql:host=$host;port=$port;dbname=$dbname;user=$user;password=$password");
     $conn_string = "host={$env['HOST']} port={$env['PORT']} dbname={$env['DBNAME']} user={$env['USER']} password={$env['PASSWORD']}";
     pg_connect($conn_string);
-    echo "Connected successfully";
+    echo "<script> console.log('Connected successfully');</script>";
     // Perform your database operations here...
 } catch (Exception $e) {
-    echo "Connection failed: " . $e->getMessage();
+    echo "<script> console.log('Connection failed: " . $e->getMessage() ."); </script>";
 }
 ?>
