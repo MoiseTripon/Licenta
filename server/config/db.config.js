@@ -1,6 +1,9 @@
+const dotenv = require('dotenv');
+dotenv.config();
+
 module.exports = {
-  USER:"moisetripon",
-  HOSTNAME: "studentmanager.cmogdhc.mongodb.net",
-  PASS: "admin",
-  DB: "student-manager"
+  USER:process.env.USER,
+  HOSTNAME: process.env.HOSTNAME,
+  PASS: process.env.PASSWORD,
+  DB: process.env.DATABASE
 };

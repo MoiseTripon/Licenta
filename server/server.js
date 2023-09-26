@@ -18,9 +18,11 @@ app.use(express.urlencoded({ extended: true }));
 
 const db = require("./models");
 const Role = db.role;
-//mongodb+srv://moisetripon:admin@studentmanager.cmogdhc.mongodb.net/student-manager?retryWrites=true&w=majority
+
+const connection_string = `mongodb+srv://${dbConfig.USER}:${dbConfig.PASS}@${dbConfig.HOSTNAME}/${dbConfig.DB}?retryWrites=true&w=majority`;
+
 db.mongoose
-  .connect(`mongodb+srv://${dbConfig.USER}:${dbConfig.PASS}@${dbConfig.HOSTNAME}/${dbConfig.DB}?retryWrites=true&w=majority`, {
+  .connect(connection_string, {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })

@@ -1,3 +1,6 @@
+const dotenv = require('dotenv');
+dotenv.config();
+
 module.exports = {
-    secret: "student-manager-university-degree"
+    secret: process.env.JWT_SECRET
   };
